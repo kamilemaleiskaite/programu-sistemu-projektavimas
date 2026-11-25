@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <title>Team chat</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/chat.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="Gather home">
+        <span class="brand-mark" aria-hidden="true">g</span>
+        <span>gather<span class="brand-period">.</span></span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <div class="workspace">
+        <span class="workspace-icon">S</span>
+        <span class="workspace-name">Studio North</span>
+        <span class="workspace-chevron" aria-hidden="true">⌄</span>
+      </div>
+      <div class="nav-heading">YOUR SPACE</div>
+      <nav class="channels" aria-label="Chat channels">
+        <a class="channel active" href="#general">
+          <span class="channel-hash">#</span>
+          <span>general</span>
+          <span class="channel-dot" aria-label="Active"></span>
+        </a>
+      </nav>
+      <div class="sidebar-note">
+        <span class="note-sparkle" aria-hidden="true">✳</span>
+        <p>Good conversations<br>make great things.</p>
+        <span class="note-caption">A little space to connect.</span>
+      </div>
+      <div class="profile">
+        <span class="avatar profile-avatar" id="profile-avatar">G</span>
+        <span class="profile-copy">
+          <span class="profile-name" id="profile-name">Guest</span>
+          <span class="profile-status"><span class="online-dot"></span> Here to chat</span>
+        </span>
+        <button class="profile-menu" type="button" aria-label="Profile menu">···</button>
+      </div>
+    </aside>
+
+    <section class="chat-panel" aria-label="General chat">
+      <header class="chat-header">
+        <div>
+          <div class="channel-title"><span class="title-hash">#</span> general</div>
+          <p class="channel-description">The place for everything and everyone.</p>
+        </div>
+        <div class="header-right">
+          <span class="connection-label"><span class="online-dot" id="connection-dot"></span><span id="connection-status">Connecting</span></span>
+          <span class="header-divider"></span>
+          <span class="header-tag">STUDIO NORTH</span>
+        </div>
+      </header>
+
+      <div class="welcome">
+        <div class="welcome-date"><span>✳</span> A FRESH START <span>✳</span></div>
+        <h1>Good things start<br>with <em>hello.</em></h1>
+        <p>This is the beginning of something good.<br>Say hello to your team.</p>
+      </div>
+
+      <div class="messages" id="messages" aria-live="polite" aria-label="Messages"></div>
+
+      <form class="composer" id="message-form">
+        <label class="sr-only" for="message-input">Write a message</label>
+        <input id="message-input" type="text" maxlength="500" placeholder="Message #general" autocomplete="off" disabled>
+        <span class="composer-hint">500 characters max</span>
+        <button class="send-button" id="send-button" type="submit" aria-label="Send message" disabled>
+          <span>Send</span><span class="send-arrow" aria-hidden="true">↗</span>
+        </button>
+      </form>
+      <footer class="chat-footer"><span>BE KIND. BE CURIOUS.</span><span>MADE FOR GOOD CONVERSATIONS</span></footer>
+    </section>
+  </main>
+
+  <dialog class="name-dialog" id="name-dialog">
+    <form method="dialog" id="name-form">
+      <span class="dialog-eyebrow">WELCOME IN</span>
+      <h2>First, what<br>should we <em>call you?</em></h2>
+      <label for="name-input">YOUR NAME</label>
+      <input id="name-input" type="text" maxlength="24" placeholder="e.g. Alex" autocomplete="nickname" required>
+      <p class="dialog-error" id="dialog-error" aria-live="polite"></p>
+      <button class="join-button" type="submit">Join the conversation <span aria-hidden="true">↗</span></button>
+      <span class="dialog-caption">A name is all you need. No account, no fuss.</span>
+    </form>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "programu-sistemu-projektavimas",
+  "version": "1.0.0",
+  "description": "Programų sistemų 3 kurso studentų programų sistemų projektavimo dalyko repositorija.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamilemaleiskaite/programu-sistemu-projektavimas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kamilemaleiskaite/programu-sistemu-projektavimas/issues"
+  },
+  "homepage": "https://github.com/kamilemaleiskaite/programu-sistemu-projektavimas#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.5.0",
+    "uuid": "^14.0.3",
+    "ws": "^8.23.0"
+  }
+}
