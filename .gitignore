@@ -1,0 +1,15 @@
+node_modules/
+.env
+data/
+uploads/
+npm-debug.log*
+
+# .NET build output
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
+
+# IDE settings
+.idea/
